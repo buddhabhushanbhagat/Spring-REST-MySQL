@@ -26,7 +26,7 @@ public class EmpReadController {
 	private EmployeeService service;
 	
 	@GetMapping(value= {"/get/{id}"},produces= {"application/json","application/xml"})
-	@ApiOperation(value = "Find Employee by Id", notes = "Provide an id to look up a specific record from emploees",
+	@ApiOperation(value = "Find the Employee by Id", notes = "Provide an id to look up a specific record from emploees",
 	response = Employee.class)
 	public ResponseEntity<Employee> getEmp(@PathVariable int id) throws DatabaseException {
 		Employee obj=service.getEmpById(id);
